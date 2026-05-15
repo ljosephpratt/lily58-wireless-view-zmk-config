@@ -19,13 +19,13 @@
             layers = <0 1>;
         };
 
-        MO-MS {
+        MO_MS {
             bindings = <&mo 5>;
             key-positions = <25 26>;
             layers = <0 1>;
         };
 
-        MO-L2-R {
+        MO_L2_R {
             bindings = <&mo 2>;
             key-positions = <33 34>;
             layers = <0 1>;
