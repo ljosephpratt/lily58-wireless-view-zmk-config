@@ -22,11 +22,13 @@
         MO-MS {
             bindings = <&mo 5>;
             key-positions = <25 26>;
+            layers = <0 1>;
         };
 
         MO-L2-R {
             bindings = <&mo 2>;
             key-positions = <33 34>;
+            layers = <0 1>;
         };
     };
 
