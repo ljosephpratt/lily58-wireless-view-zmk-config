@@ -16,7 +16,7 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <28 31>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         MO-MS {
