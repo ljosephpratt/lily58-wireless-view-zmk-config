@@ -84,6 +84,17 @@
         };
     };
 
+    behaviors {
+        tap_dance_cmd: tap_dance_cmd {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CMD";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&mo 2>;
+
+            tapping-term-ms = <175>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
