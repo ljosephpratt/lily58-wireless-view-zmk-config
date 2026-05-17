@@ -20,91 +20,91 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <28 31>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_nav {
             bindings = <&mo 3>;
             key-positions = <13 14>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_nav {
             bindings = <&mo 3>;
             key-positions = <21 22>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <27 28>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_gui {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <31 32>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <26 27>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_alt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <32 33>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_ctl {
             bindings = <&kp LCTRL>;
             key-positions = <25 26>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_ctl {
             bindings = <&kp RCTRL>;
             key-positions = <33 34>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_gui_alt {
             bindings = <&kp LA(LGUI)>;
             key-positions = <26 27 28>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_gui_alt {
             bindings = <&kp RA(RGUI)>;
             key-positions = <31 32 33>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_gui_ctl {
             bindings = <&kp LC(LEFT_GUI)>;
             key-positions = <25 26 27>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_gui_ctl {
             bindings = <&kp RC(RIGHT_GUI)>;
             key-positions = <32 33 34>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         l_gui_ctl_alt {
             bindings = <&kp LA(LC(LEFT_GUI))>;
             key-positions = <25 27 28>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         r_gui_ctl_alt {
             bindings = <&kp RC(RA(RIGHT_GUI))>;
             key-positions = <32 31 34>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         to_two {
