@@ -71,18 +71,6 @@
             layers = <0 1>;
         };
 
-        to_two {
-            bindings = <&to 1>;
-            key-positions = <36 37 38 39>;
-            layers = <0>;
-        };
-
-        to_one {
-            bindings = <&to 0>;
-            key-positions = <36 37 38 39>;
-            layers = <2>;
-        };
-
         l_gui_alt {
             bindings = <&kp LA(LGUI)>;
             key-positions = <26 27 28>;
@@ -119,10 +107,22 @@
             layers = <0 1>;
         };
 
+        to_two {
+            bindings = <&to 1>;
+            key-positions = <36 37 38 39>;
+            layers = <0>;
+        };
+
         to_three {
             bindings = <&to 2>;
             key-positions = <36 37 38 39>;
             layers = <1>;
+        };
+
+        to_one {
+            bindings = <&to 0>;
+            key-positions = <36 37 38 39>;
+            layers = <2>;
         };
     };
 
