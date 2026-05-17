@@ -24,13 +24,13 @@
         };
 
         l_nav {
-            bindings = <&mo 2>;
+            bindings = <&mo 3>;
             key-positions = <13 14>;
             layers = <0 1>;
         };
 
         r_nav {
-            bindings = <&mo 2>;
+            bindings = <&mo 3>;
             key-positions = <21 22>;
             layers = <0 1>;
         };
@@ -80,7 +80,7 @@
         to_one {
             bindings = <&to 0>;
             key-positions = <36 37 38 39>;
-            layers = <1>;
+            layers = <2>;
         };
 
         l_gui_alt {
@@ -118,6 +118,12 @@
             key-positions = <32 31 34>;
             layers = <0 1>;
         };
+
+        to_three {
+            bindings = <&to 2>;
+            key-positions = <36 37 38 39>;
+            layers = <1>;
+        };
     };
 
     behaviors {
@@ -125,7 +131,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_GLOBE";
             #binding-cells = <0>;
-            bindings = <&kp GLOBE>, <&tog 2>;
+            bindings = <&kp GLOBE>, <&tog 3>;
 
             tapping-term-ms = <250>;
         };
@@ -153,6 +159,17 @@
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                 &kp H      &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B          &kp LBKT    &kp RBKT   &kp N      &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
                                 &tap_dance_globe  &kp LALT  &kp BACKSPACE  &kp LGUI    &kp ENTER  &kp SPACE  &kp DEL  &tap_dance_globe
+            >;
+        };
+
+        layer_3 {
+            display-name = "Base 3";
+            bindings = <
+&kp GRAVE       &kp N1  &kp N2  &kp N3            &kp N4    &kp N5                                    &kp N6     &kp N7   &kp N8            &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E             &kp R     &kp T                                     &kp Y      &kp U    &kp I             &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                     &kp H      &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B         &kp LBKT         &kp RBKT   &kp N      &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &tap_dance_globe  &kp LALT  &kp LEFT_GUI  &kp BACKSPACE    &kp ENTER  &kp SPACE  &kp DEL  &tap_dance_globe
             >;
         };
 
