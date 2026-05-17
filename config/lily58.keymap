@@ -35,7 +35,7 @@
             layers = <0 1>;
         };
 
-        l_cmd {
+        l_gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <27 28>;
             layers = <0 1>;
@@ -82,14 +82,50 @@
             key-positions = <36 37 38 39>;
             layers = <1>;
         };
+
+        l_gui_alt {
+            bindings = <&kp LA(LGUI)>;
+            key-positions = <26 27 28>;
+            layers = <0 1>;
+        };
+
+        r_gui_alt {
+            bindings = <&kp RA(RGUI)>;
+            key-positions = <31 32 33>;
+            layers = <0 1>;
+        };
+
+        l_gui_ctl {
+            bindings = <&kp LC(LEFT_GUI)>;
+            key-positions = <25 26 27>;
+            layers = <0 1>;
+        };
+
+        r_gui_ctl {
+            bindings = <&kp RC(RIGHT_GUI)>;
+            key-positions = <32 33 34>;
+            layers = <0 1>;
+        };
+
+        l_gui_ctl_alt {
+            bindings = <&kp LA(LC(LEFT_GUI))>;
+            key-positions = <25 27 28>;
+            layers = <0 1>;
+        };
+
+        r_gui_ctl_alt {
+            bindings = <&kp RC(RA(RIGHT_GUI))>;
+            key-positions = <32 31 34>;
+            layers = <0 1>;
+        };
     };
 
     behaviors {
-        tap_dance_cmd: tap_dance_cmd {
+        tap_dance_globe: tap_dance_globe {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CMD";
+            label = "TAP_DANCE_GLOBE";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo 2>;
+            bindings = <&kp GLOBE>, <&tog 2>;
 
             tapping-term-ms = <250>;
         };
@@ -101,22 +137,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE       &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                     &kp N6     &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E   &kp R     &kp T                                      &kp Y      &kp U    &kp I      &kp O    &kp P     &kp EQUAL
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F     &kp G                                      &kp H      &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C   &kp V     &kp B           &kp LBKT    &kp RBKT       &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &none   &kp LALT  &tap_dance_cmd  &kp RET     &kp BACKSPACE  &kp SPACE  &kp DEL  &none
+&kp GRAVE       &kp N1  &kp N2  &kp N3            &kp N4    &kp N5                                   &kp N6     &kp N7   &kp N8            &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E             &kp R     &kp T                                    &kp Y      &kp U    &kp I             &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                    &kp H      &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B         &kp LBKT    &kp RBKT       &kp N      &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &tap_dance_globe  &kp LALT  &kp LEFT_GUI  &kp RET     &kp BACKSPACE  &kp SPACE  &kp DEL  &tap_dance_globe
             >;
         };
 
         layer_2 {
             display-name = "Base 2";
             bindings = <
-&kp GRAVE       &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                &kp N6     &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W   &kp E   &kp R     &kp T                                 &kp Y      &kp U    &kp I      &kp O    &kp P     &kp EQUAL
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F     &kp G                                 &kp H      &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C   &kp V     &kp B          &kp LBKT    &kp RBKT   &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                &none   &kp LALT  &kp BACKSPACE  &kp LGUI    &kp ENTER  &kp SPACE  &kp DEL  &none
+&kp GRAVE       &kp N1  &kp N2  &kp N3            &kp N4    &kp N5                                &kp N6     &kp N7   &kp N8            &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E             &kp R     &kp T                                 &kp Y      &kp U    &kp I             &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                 &kp H      &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B          &kp LBKT    &kp RBKT   &kp N      &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &tap_dance_globe  &kp LALT  &kp BACKSPACE  &kp LGUI    &kp ENTER  &kp SPACE  &kp DEL  &tap_dance_globe
             >;
         };
 
