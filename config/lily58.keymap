@@ -20,91 +20,91 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <28 31>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_nav {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <13 14>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_nav {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <21 22>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_gui {
             bindings = <&kp LEFT_GUI>;
             key-positions = <27 28>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_gui {
             bindings = <&kp RIGHT_GUI>;
             key-positions = <31 32>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <26 27>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_alt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <32 33>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_ctl {
             bindings = <&kp LCTRL>;
             key-positions = <25 26>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_ctl {
             bindings = <&kp RCTRL>;
             key-positions = <33 34>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_gui_alt {
             bindings = <&kp LA(LGUI)>;
             key-positions = <26 27 28>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_gui_alt {
             bindings = <&kp RA(RGUI)>;
             key-positions = <31 32 33>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_gui_ctl {
             bindings = <&kp LC(LEFT_GUI)>;
             key-positions = <25 26 27>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_gui_ctl {
             bindings = <&kp RC(RIGHT_GUI)>;
             key-positions = <32 33 34>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         l_gui_ctl_alt {
             bindings = <&kp LA(LC(LEFT_GUI))>;
             key-positions = <25 27 28>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         r_gui_ctl_alt {
             bindings = <&kp RC(RA(RIGHT_GUI))>;
             key-positions = <32 31 34>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3>;
         };
 
         to_two {
@@ -122,6 +122,12 @@
         to_one {
             bindings = <&to 0>;
             key-positions = <36 37 38 39>;
+            layers = <3>;
+        };
+
+        to_four {
+            bindings = <&to 3>;
+            key-positions = <36 37 38 39>;
             layers = <2>;
         };
     };
@@ -131,7 +137,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_GLOBE";
             #binding-cells = <0>;
-            bindings = <&kp GLOBE>, <&tog 3>;
+            bindings = <&kp GLOBE>, <&tog 4>;
 
             tapping-term-ms = <250>;
         };
@@ -170,6 +176,17 @@
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                     &kp H      &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B         &kp LBKT         &kp RBKT   &kp N      &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
                                 &tap_dance_globe  &kp LALT  &kp LEFT_GUI  &kp BACKSPACE    &kp ENTER  &kp SPACE  &kp DEL  &tap_dance_globe
+            >;
+        };
+
+        layer_4 {
+            display-name = "Base 4";
+            bindings = <
+&kp GRAVE       &kp N1  &kp N2  &kp N3            &kp N4    &kp N5                                &kp N6         &kp N7   &kp N8            &kp N9   &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E             &kp R     &kp T                                 &kp Y          &kp U    &kp I             &kp O    &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F     &kp G                                 &kp H          &kp J    &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C             &kp V     &kp B         &kp LBKT     &kp RBKT   &kp N          &kp M    &kp COMMA         &kp DOT  &kp FSLH  &kp BACKSLASH
+                                &tap_dance_globe  &kp LALT  &kp LEFT_GUI  &kp ENTER    &kp SPACE  &kp BACKSPACE  &kp DEL  &tap_dance_globe
             >;
         };
 
